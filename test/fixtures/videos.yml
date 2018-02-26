@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyString
+  location: MyString
+  tags: MyString
+  cloudinary_url: MyString
+  price: 1.5
+  number_of_views: 1
+  user: one
+
+two:
+  title: MyString
+  description: MyString
+  location: MyString
+  tags: MyString
+  cloudinary_url: MyString
+  price: 1.5
+  number_of_views: 1
+  user: two
