@@ -1,3 +1,19 @@
+
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
-<%= link_to "new user", new_user_registration_path %>
+
+
+<div class="container">
+  <h1>Clipper</h1>
+
+  <div class="row">
+    <div class="col-xs-12 col-sm-4">
+      <% @videos.each do |video| %>
+        <div class="card">
+          <%= video.title %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+</div>
