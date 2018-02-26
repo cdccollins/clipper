@@ -1,2 +1,13 @@
 
-
+<div class="banner">
+  <div>
+    <h1>Clippr</h1>
+    <p>Find and license video clips</p>
+    <%= form_tag videos_path, :method => 'get' do %>
+      <p>
+        <%= text_field_tag :search, params[:search] %>
+        <%= submit_tag "Search", :name => nil %>
+      </p>
+    <% end %>
+  </div>
+</div>
