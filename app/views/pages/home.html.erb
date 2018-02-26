@@ -4,3 +4,14 @@
     <p>Find and license video clips</p>
   </div>
 </div>
+
+<div class="row">
+  <div class="col-xs-12 col-sm-4">
+    <% @videos.each do |video| %>
+      <div class="card">
+        <%= video.title %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
