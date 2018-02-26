@@ -1,19 +1,17 @@
-
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-
-
-<div class="container">
-  <h1>Clipper</h1>
-
-  <div class="row">
-    <div class="col-xs-12 col-sm-4">
-      <% @videos.each do |video| %>
-        <div class="card">
-          <%= video.title %>
-        </div>
-      <% end %>
-    </div>
+<div class="banner">
+  <div>
+    <h1>Clippr</h1>
+    <p>Find and license video clips</p>
   </div>
-
 </div>
+
+<div class="row">
+  <div class="col-xs-12 col-sm-4">
+    <% @videos.each do |video| %>
+      <div class="card">
+        <%= video.title %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
