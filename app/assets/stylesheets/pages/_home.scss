@@ -1,1 +1,26 @@
-// Specific CSS for your home-page
+h1 {
+  color: white;
+}
+
+.search-field {
+  border-radius: 5px;
+  color: black;
+}
+
+#wrapper h1 {
+  margin-left: 50px;
+  color: #15B097;
+}
+
+.home-banner {
+  position: relative;
+}
+
+.home-nav {
+  background-color: transparent;
+  position: fixed;
+  z-index: 1;
+}
+.navbar-wagon-black {
+  background-color: #313638 !important;
+}

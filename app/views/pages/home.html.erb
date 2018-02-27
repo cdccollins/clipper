@@ -1,17 +1,22 @@
-<div class="banner">
+<div class="navbar-wagon home-nav">
+  <p>Banner</p>
+</div>
+
+<div class="banner home-banner">
   <div>
     <h1>Clippr</h1>
     <p>Find and license video clips</p>
     <%= form_tag videos_path, :method => 'get' do %>
       <p>
-        <%= text_field_tag :search, params[:search] %>
-        <%= submit_tag "Search", :name => nil %>
+        <%= text_field_tag :search, params[:search], :class => 'search-field' %>
+        <%= submit_tag "Search", :name => nil, :class => 'btn-success' %>
       </p>
     <% end %>
   </div>
 </div>
 
 <div id="wrapper">
+  <h1>Today's Most Popular Videos</h1>
   <div class="container align-middle">
     <div class="row">
       <div class="col-xs-12 col-md-4">
@@ -28,4 +33,49 @@
       </div>
     </div>
   </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <p>end page</p>
 </div>
