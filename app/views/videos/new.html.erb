@@ -6,7 +6,9 @@
   <div class="upload text-center">
     <i class="fas fa-cloud-upload-alt"></i>
     <br>
-    <div class="btn btn-lg">Choose files to upload</div>
+    <%= simple_form_for(@video) do |f| %>
+      <%= f.input :cloudinary_url, label: 'ES6 Sux', placeholder: "Paste your video url here" %>
+    <% end %>
   </div>
 
   <div class="options-wrapper">
