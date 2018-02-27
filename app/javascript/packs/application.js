@@ -12,3 +12,8 @@
 import { initUpdateNavbarOnScroll } from '../components/navbar';
 initUpdateNavbarOnScroll();
 console.log("Hello from app/javascript/packs/application.js!");
+
+// import { hideVideo } from '../components/cards';
+// hideVideo();
+import { hoverVideo } from '../components/cards';
+hoverVideo();
