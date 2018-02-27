@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  # resources :users, only: [:show] do
-    resources :videos
-
+  resources :users, only: [:show]
+  resources :videos
   # resources :videos, only: [:index]
 
   root to: 'pages#home'
