@@ -3,19 +3,43 @@
   margin-top: 50px;
   height: 300px;
 }
-.fas{
+.fa-cloud-upload-alt{
   font-size: 100px;
   color: #15B097;
   margin-top: 75px;
 }
-.upload-options {
-  border: 1px dashed #C4C4C4;
+
+.options-wrapper {
   margin-top: 20px;
+  border: 1px dashed #C4C4C4;
+}
+
+.upload-options {
+  margin-top: 20px;
+  margin-bottom: 0px;
   height: 100px;
   display: flex;
   justify-content: space-around;
+  position: relative;
 }
-.fab {
+.upload-option-names {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 0px;
+}
+.options {
+  margin-top: 15px;
+  border: 1px solid #15B097;
+  background-color: #15B097;
+  border-radius: 50%;
+  height: 75px;
+  width: 75px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.option-logo {
   font-size: 50px;
-  color: #15B097;
+  color: white;
 }
+
