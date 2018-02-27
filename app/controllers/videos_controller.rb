@@ -1,6 +1,6 @@
 class VideosController < ApplicationController
-  before_action :find_video, only: [:show, :edit, :delete]
-  skip_before_action :authenticate_user!, only: [:index]
+  before_action :find_video, only: [:show, :edit, :delete, :update]
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
     @videos = policy_scope(Video).order(created_at: :desc)
@@ -55,6 +55,6 @@ class VideosController < ApplicationController
   end
 
   def video_params
-    params.require(:video).permit(:title, :description)
+    params.require(:video).permit(:title, :description, :tags, :price, :location)
   end
 end

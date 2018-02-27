@@ -5,23 +5,18 @@
   flex: 1 1 auto;
 }
 
-.card {
-  width: 100%;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  opacity: 0.8;
+.video {
+  width: 310px;
   margin: 10px 10px;
-  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9));
   align-items: center;
   color: rgb(255,255,255);
-  background-size: cover;
   background-position: center;
   position: relative;
-  height: 180px;
+  height: 100%;
+
 }
 
-.card:hover {
-  opacity: 1;
-}
+
 
 .card-category {
   position: absolute;
@@ -30,9 +25,8 @@
 }
 
 .card p {
-  font-size: 25px;
-  font-weight: lighter;
-  color: rgb(255, 255, 255);
+  font-size: 15px;
+  color: #4D4545;
   opacity: 0.9;
   margin-left: 10px;
 }

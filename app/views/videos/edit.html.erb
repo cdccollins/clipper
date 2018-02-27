@@ -1,0 +1,22 @@
+<div class="new-container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+      <h1>Edit Video Information</h1>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+      <div class="form">
+        <%= simple_form_for(@video) do |f| %>
+        <%= f.input :title %>
+        <%= f.input :description %>
+        <%= f.input :tags %>
+        <%= f.input :price %>
+        <%= f.input :location %>
+        <div class="submit">
+          <%= f.button :submit, :class=>"green-button" %>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
