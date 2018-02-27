@@ -20,16 +20,29 @@
   <div class="container align-middle">
     <div class="row">
       <div class="col-xs-12 col-md-4">
-        <div class="card" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1446770145316-10a05382c470?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f83e4b1e921bb496711ab1299032d555&auto=format&fit=crop&w=2855&q=80')">
+        <div class="card">
+          <%= cl_video_tag("chat", :width=>320, :crop=>"scale", autoplay: true); %>
+          <div class="content">
+            <h5>The cuttest cat</h5>
+          </div>
         </div>
       </div>
       <div class="col-xs-12 col-md-4">
-        <div class="card" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1446770145316-10a05382c470?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f83e4b1e921bb496711ab1299032d555&auto=format&fit=crop&w=2855&q=80')">
+        <div class="card">
+          <%= cl_video_tag("chat", :width=>320, :crop=>"scale", autoplay: true); %>
+          <div class="content">
+            <h5>The cuttest cat</h5>
+          </div>
         </div>
       </div>
       <div class="col-xs-12 col-md-4">
-        <div class="card" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1446770145316-10a05382c470?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f83e4b1e921bb496711ab1299032d555&auto=format&fit=crop&w=2855&q=80')">
+        <div class="card">
+          <%= cl_video_tag("chat", :width=>320, :crop=>"scale", autoplay: true); %>
+          <div class="content">
+            <h5>The cuttest cat</h5>
+          </div>
         </div>
+      </div>
       </div>
     </div>
   </div>
@@ -77,8 +90,11 @@
   <br>
   <br>
   <br>
+
+  <%= cl_video_tag("chat", :width=>320, :crop=>"scale", autoplay: true) %>
   <p>end page</p>
 </div>
+
 
 
 <%= link_to "LOG OUT", destroy_user_session_path(current_user), method: :delete %>
