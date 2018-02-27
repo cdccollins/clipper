@@ -1,4 +1,4 @@
-<%#= cl_image_path @user.profile_picture, :class => "avatar" %>
+<%#= cl_image_path @user.profile_picture, :class => "avatar-large" %>
 <div class="user-container">
 
   <div class="user-banner">
@@ -10,11 +10,6 @@
       <p>About Me: <%= @user.about_me %></p>
     </div>
   </div>
-
-
-  <%= link_to user_path(@user) do %>
-    <div class="card-category"><%= @user.first_name %></div>
-  <% end %>
 
   <div class="user-videos video-wrap">
     <div class="container align-middle video-container">
