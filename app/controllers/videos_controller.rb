@@ -1,8 +1,16 @@
 class VideosController < ApplicationController
   before_action :find_video, only: [:show, :edit, :delete]
+  skip_before_action :authenticate_user!, only: [:index]
 
   def index
-    @videos = Video.all
+    @videos = policy_scope(Video).order(created_at: :desc)
+    if params[:query].present?
+      sql_query = "title ILIKE :query OR syllabus ILIKE :query"
+      @Videos = Video.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @videos = Video.all
+    end
+    authorize @videos
   end
 
   def new
