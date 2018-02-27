@@ -21,8 +21,12 @@
     <div class="row">
       <% @videos.each do |video| %>
       <div class="col-xs-12 col-md-4">
+        <%= link_to video_path(video) do %>
         <div class="card">
-          <div class="video"> <%= cl_video_tag(video.cloudinary_url, :width=>310, :crop=>"scale", autoplay: false) %></div>
+          <div class="video"> <%= cl_video_tag(video.cloudinary_url, :crop=>"scale", autoplay: false, loop: true, preload: "auto", poster: true) %></div>
+          <p><%= video.title %></p>
+        </div>
+         <% end %>
           <div class="content">
           </div>
         </div>
