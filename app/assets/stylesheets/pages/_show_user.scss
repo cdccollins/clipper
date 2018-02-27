@@ -1,0 +1,38 @@
+body {
+  background-color:lightgrey;
+}
+
+.user-videos {
+  margin: 100px;
+}
+
+.user-container {
+  margin:20px;
+  background-color:white;
+}
+
+
+.video-wrap {
+  position: relative;
+  height: 200px;
+  width: 257px;
+}
+
+.video-description {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+
+  transition: opacity .2s, visibility .2s;
+}
+
+.video-wrap:hover .video-description {
+  visibility: visible;
+  opacity: 1;
+}
