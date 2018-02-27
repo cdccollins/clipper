@@ -10,8 +10,6 @@ gem 'puma'
 gem 'rails', '5.1.5'
 gem 'redis'
 gem 'devise'
-gem 'cloudinary'
-
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
