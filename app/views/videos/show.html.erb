@@ -1,2 +1,15 @@
-<h1>This is show page</h1>
-<%= link_to "View artist", user_path(@video.user_id) %>
+<div class="container">
+  <h1><%= @video.title %></h1>
+  <h3><%= @video.user.first_name + " " + @video.user.last_name %></h2>
+  <br>
+
+  <div class="video text-center"><%= cl_video_tag(@video.cloudinary_url, :width=>720, :crop=>"scale", controls: true) %></div>
+  <p><%= @video.description %></p>
+
+  <div class="video-footer">
+    <i class="fas fa-download"></i>
+  </div>
+
+  <%= link_to "Edit video", edit_video_path(@video) %>
+  <%= link_to "View artist", user_path(@video.user_id) %>
+</div>
