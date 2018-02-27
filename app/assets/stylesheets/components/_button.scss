@@ -1,32 +1,44 @@
 .green-button {
   background-color: #15B097;
   color: white;
-  height: 50px;
+  height: 40px;
   width: 200px;
   border-radius: 5px;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  &:hover {
+    background-color: #129680;
+    color: white;
+  }
 }
 
 .green-button-large {
   background-color: #15B097;
   color: white;
-  height: 50px;
+  height: 40px;
   width: 400px;
   border-radius: 5px;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  &:hover {
+    background-color: #129680;
+    color: white;
+  }
 }
 
 .red-button {
   background-color: #EB5757;
   color: white;
-  height: 50px;
+  height: 40px;
   width: 200px;
   border-radius: 5px;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  &:hover {
+    background-color: #d65151;
+    color: white;
+  }
 }
