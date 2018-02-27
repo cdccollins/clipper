@@ -1,69 +1,73 @@
-<h1>User show page</h1> || <%= @user.email %>
-
-
 <%#= cl_image_path @user.profile_picture, :class => "avatar" %>
-<%= image_tag 'https://kitt.lewagon.com/placeholder/users/ssaunier', :class => "avatar" %>
+<div class="user-container">
 
-<div class="user-banner">
-    <h1><%= @user.first_name%> <%= @user.last_name %> </h1>
-  <div class="user-content">
-    <p><%= @user.about_me %></p>
+  <div class="user-banner">
+    <%= image_tag 'https://kitt.lewagon.com/placeholder/users/ssaunier', :class => "avatar-large" %>
+    <div class = "user-name">
+      <h1><%= @user.first_name%> <%= @user.last_name %> </h1>
+    </div>
+    <div class="user-content">
+      <p>About Me: <%= @user.about_me %></p>
+    </div>
   </div>
-</div>
 
-<%= link_to 'Add new video', new_video_path %>
 
-<%= link_to user_path(@user) do %>
+  <%= link_to user_path(@user) do %>
     <div class="card-category"><%= @user.first_name %></div>
-  </div>
-<% end %>
+  <% end %>
 
-<div class="user-videos video-wrap">
-  <div class="container align-middle user-container">
-    <h2>My Uploaded Videos</h2>
-    <div class="row">
-      <div class="col-xs-12 col-md-4">
-        <div class="card">
-          <%= cl_video_tag("chat", :width=>320, :crop=>"scale", autoplay: true); %>
-          <p class= "video-description">@video.title</p>
+  <div class="user-videos video-wrap">
+    <div class="container align-middle video-container">
+      <h2>My Uploaded Videos</h2><%= link_to 'Add new video', new_video_path %>
+      <div class="row">
+        <div class="col-xs-12 col-md-4">
+          <div class="card">
+            <%= cl_video_tag("chat", :width=>320, :crop=>"scale", autoplay: true); %>
+            <p class= "video-description">@video.title</p>
+          </div>
         </div>
-      </div>
-      <div class="col-xs-12 col-md-4">
-        <div class="card">
-          <%= cl_video_tag("chat", :width=>320, :crop=>"scale", autoplay: true); %>
+        <div class="col-xs-12 col-md-4">
+          <div class="card">
+            <%= cl_video_tag("chat", :width=>320, :crop=>"scale", autoplay: true); %>
+            <p class= "video-description">@video.title</p>
+          </div>
         </div>
-      </div>
-      <div class="col-xs-12 col-md-4">
-        <div class="card">
-          <%= cl_video_tag("chat", :width=>320, :crop=>"scale", autoplay: true); %>
+        <div class="col-xs-12 col-md-4">
+          <div class="card">
+            <%= cl_video_tag("chat", :width=>320, :crop=>"scale", autoplay: true); %>
+            <p class= "video-description">@video.title</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="container align-middle user-container">
-    <h2>My Purchased Videos</h2>
-    <div class="row">
-      <div class="col-xs-12 col-md-4">
-        <div class="card">
-          <%= cl_video_tag("chat", :width=>320, :crop=>"scale", autoplay: true); %>
+    <div class="container align-middle video-container">
+      <h2>My Purchased Videos</h2>
+      <div class="row">
+        <div class="col-xs-12 col-md-4">
+          <div class="card">
+            <%= cl_video_tag("chat", :width=>320, :crop=>"scale", autoplay: true); %>
+            <p class= "video-description">@video.title</p>
+          </div>
         </div>
-      </div>
-      <div class="col-xs-12 col-md-4">
-        <div class="card">
-          <%= cl_video_tag("chat", :width=>320, :crop=>"scale", autoplay: true); %>
+        <div class="col-xs-12 col-md-4">
+          <div class="card">
+            <%= cl_video_tag("chat", :width=>320, :crop=>"scale", autoplay: true); %>
+            <p class= "video-description">@video.title</p>
+          </div>
         </div>
-      </div>
-      <div class="col-xs-12 col-md-4">
-        <div class="card">
-          <%= cl_video_tag("chat", :width=>320, :crop=>"scale", autoplay: true); %>
+        <div class="col-xs-12 col-md-4">
+          <div class="card">
+            <%= cl_video_tag("chat", :width=>320, :crop=>"scale", autoplay: true); %>
+            <p class= "video-description">@video.title</p>
+          </div>
         </div>
       </div>
     </div>
+
   </div>
 
+
+  <%= link_to "LOG OUT", destroy_user_session_path(current_user), method: :delete %>
 </div>
-
-
-<%= link_to "LOG OUT", destroy_user_session_path(current_user), method: :delete %>
 
