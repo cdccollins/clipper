@@ -19,83 +19,19 @@
   <h1>Today's Most Popular Videos</h1>
   <div class="container align-middle">
     <div class="row">
+      <% @videos.each do |video| %>
       <div class="col-xs-12 col-md-4">
         <div class="card">
-          <div class="video"> <%= cl_video_tag("chat", :width=>310, :crop=>"scale", autoplay: false) %></div>
+          <div class="video"> <%= cl_video_tag(video.cloudinary_url, :width=>310, :crop=>"scale", autoplay: false) %></div>
           <div class="content">
-            <h5>The cuttest cat</h5>
           </div>
         </div>
       </div>
-      <div class="col-xs-12 col-md-4">
-        <div class="card">
-          <div class="video"> <%= cl_video_tag("chat", :width=>310, :crop=>"scale", autoplay: false) %></div>
-          <div class="content">
-            <h5>The cuttest cat</h5>
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-12 col-md-4">
-        <div class="card">
-          <div class="video"> <%= cl_video_tag("chat", :width=>310, :crop=>"scale", autoplay: false) %></div>
-          <div class="content">
-          <div class="content">
-            <h5>The cuttest cat</h5>
-          </div>
-        </div>
-      </div>
-      </div>
+      <% end %>
     </div>
   </div>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-
-
-  <p>end page</p>
 </div>
 
-
-
+<%= link_to "Log in", new_user_session_path %>
+<%= link_to "Sign up", new_user_registration_path %>
 <%= link_to "LOG OUT", destroy_user_session_path(current_user), method: :delete %>

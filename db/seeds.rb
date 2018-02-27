@@ -5,3 +5,31 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+ # t.string "title"
+ #    t.string "description"
+ #    t.string "location"
+ #    t.string "tags"
+ #    t.string "cloudinary_url"
+ #    t.float "price"
+ #    t.integer "number_of_views"
+ #    t.bigint "user_id"
+Video.destroy_all
+User.destroy_all
+
+ user = User.new(
+  first_name: "babs",
+  last_name: "moor",
+  email: "babs@mail.com",
+  password: "password"
+  )
+
+video = Video.new(
+  description: "blah",
+  title: "Test title",
+  cloudinary_url: "https://res.cloudinary.com/dxtdzybai/video/upload/v1519733347/chat.mp4",
+  user: user
+  )
+
+video.save!
+# https://res.cloudinary.com/dxtdzybai/video/upload/v1519733347/chat.mp4
