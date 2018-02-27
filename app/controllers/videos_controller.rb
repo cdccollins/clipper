@@ -6,13 +6,15 @@ class VideosController < ApplicationController
   end
 
   def new
-    @user = User.find(params[:user_id])
+    @user = current_user
     @video = Video.new
+    authorize @video
   end
 
   def create
     @video = Video.new(video_params)
-    @video.user = User.find(params[:user_id])
+    @video.user = current_user
+    authorize @video
     if @video.save
       redirect_to video_path(@video)
     else
@@ -21,6 +23,7 @@ class VideosController < ApplicationController
   end
 
   def show
+
   end
 
   def edit
@@ -29,6 +32,7 @@ class VideosController < ApplicationController
   def update
     @video.update(video_params)
     redirect_to video_path(@video)
+    authorize @video
   end
 
   def destroy
@@ -39,6 +43,7 @@ class VideosController < ApplicationController
   private
   def find_video
     @video = Video.find(params[:id])
+    authorize @video
   end
 
   def video_params
