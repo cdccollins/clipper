@@ -9,6 +9,8 @@
 
 // import { initUpdateNavbarOnScroll } from '../components/navbar';
 // initUpdateNavbarOnScroll();
+
+// only include_tag js
 import { initUpdateNavbarOnScroll } from '../components/navbar';
 initUpdateNavbarOnScroll();
 console.log("Hello from app/javascript/packs/application.js!");
