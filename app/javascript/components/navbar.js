@@ -1,4 +1,7 @@
 function initUpdateNavbarOnScroll() {
+
+
+
   const navbar = document.querySelector('.navbar-wagon');
   navbar.classList.add('navbar-wagon-home');
   window.addEventListener('scroll', () => {

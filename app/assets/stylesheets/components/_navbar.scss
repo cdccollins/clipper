@@ -14,7 +14,10 @@
 
 .navbar-wagon-home {
   background-color: transparent;
-  text-color: #F4F4F4;
+
+  .navbar-wagon-link {
+    color: #A0A0A0;
+  }
 }
 // .navbar-wagon-black {
 //   background-color: #313638;
@@ -47,7 +50,7 @@
 
 /* Navbar link */
 .navbar-wagon-link {
-  color: #616668;
+  color: #A0A0A0;
   font-size: 14px;
 }
 .navbar-wagon-link:hover {
