@@ -9,6 +9,12 @@
   width: 100vw;
   align-items: center;
   justify-content: space-between;
+  background-color: transparent;
+  transition: 0.5s background-color ease;
+}
+
+.navbar-wagon-black {
+  background-color: #313638;
 }
 
 /* Logo */
@@ -76,3 +82,4 @@
   border-left: 1px solid #E6E6E6;
   border-top: 1px solid #E6E6E6;
 }
+
