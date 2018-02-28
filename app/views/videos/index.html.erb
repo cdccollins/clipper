@@ -18,7 +18,7 @@
       <div class="col-xs-12 col-md-6">
         <%= link_to video_path(video) do %>
           <div class="card">
-          <div class="video"> <%= cl_video_tag(video.cloudinary_url, :width=>310, :crop=>"scale", autoplay: false) %></div>
+          <div class="video"> <%= cl_video_tag(video.video.file.public_id, :width=>310, :crop=>"scale", autoplay: false) %></div>
           </div>
         <% end  %>
       </div>

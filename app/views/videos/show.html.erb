@@ -3,7 +3,7 @@
   <h3><%= @video.user.first_name + " " + @video.user.last_name %></h2>
   <br>
 
-  <div class="video text-center"><%= cl_video_tag(@video.cloudinary_url, :width=>720, :crop=>"scale", controls: true) %></div>
+  <div class="video text-center"><%= cl_video_tag(@video.video.file.public_id, resource_type: :video,:width=>720, :crop=>"scale", controls: true) %></div>
   <p><%= @video.description %></p>
 
   <div class="video-footer">

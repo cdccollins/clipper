@@ -7,7 +7,12 @@
     <i class="fas fa-cloud-upload-alt"></i>
     <br>
     <%= simple_form_for(@video) do |f| %>
-      <%= f.input :cloudinary_url, label: 'ES6 Sux', placeholder: "Paste your video url here" %>
+      <%#= f.input :video, label: 'ES6 Sux', placeholder: "Paste your video url here" %>
+      <%#= f.input :video_cache, as: :hidden %>
+      <%= f.input :video %>
+    <div class="form-actions">
+    <%= f.submit "Add video" %>
+    </div>
     <% end %>
   </div>
 
