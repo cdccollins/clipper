@@ -1,21 +1,20 @@
-<div class="navbar-wagon">
+<div class="navbar-wagon navbar-fixed-top">
   <!-- Logo -->
   <%= link_to root_path, class: "navbar-wagon-brand" do %>
     <%= image_tag "logo.png", height: 50 %>
   <% end %>
 
   <!-- Right Navigation -->
-  <div class="navbar-wagon-right hidden-xs hidden-sm">
-
     <div class="navbar-search">
       <!-- add a search placeholder instead of button? -->
       <%= form_tag videos_path, :method => 'get' do %>
         <p>
-          <%= text_field_tag :search, params[:search], :class => 'search-field' %>
-          <%= submit_tag "Search", :name => nil, :class => 'btn-success' %>
+          <%= text_field_tag :search, params[:search], :class => 'search-field', placeholder: 'Search keyword...' %>
         </p>
       <% end %>
     </div>
+
+  <div class="navbar-wagon-right hidden-xs hidden-sm">
 
     <% if user_signed_in? %>
 
@@ -34,7 +33,7 @@
               <% end %>
             </li>
             <li>
-              <%= link_to "#" do %>
+              <%= link_to edit_user_registration_path(current_user) do %>
                 <i class="fa fa-cog"></i>  <%= t(".settings", default: "Settings") %>
               <% end %>
             </li>
