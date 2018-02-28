@@ -7,45 +7,15 @@
     <i class="fas fa-cloud-upload-alt"></i>
     <br>
     <%= simple_form_for(@video) do |f| %>
-      <%#= f.input :video, label: 'ES6 Sux', placeholder: "Paste your video url here" %>
-      <%#= f.input :video_cache, as: :hidden %>
+    <div class="form-actions text-center">
+      <div class="input-button">
       <%= f.input :video %>
-    <div class="form-actions">
-    <%= f.submit "Add video" %>
+      </div>
+    <%= f.submit "Add video"%>
+    </div>
+  </br>
     </div>
     <% end %>
-  </div>
-
-  <div class="options-wrapper">
-    <div class="upload-options">
-      <div class="options">
-        <div class="option-logo">
-          <i class="fab fa-google-drive"></i>
-        </div>
-      </div>
-      <div class="options">
-        <div class="option-logo">
-          <i class="fas fa-cloud"></i>
-        </div>
-      </div>
-      <div class="options">
-        <div class="option-logo">
-          <i class="fab fa-dropbox"></i>
-        </div>
-      </div>
-    </div>
-
-    <div class="upload-option-names">
-      <div class="option-name">
-        <p>Google Drive</p>
-      </div>
-      <div class="option-name">
-        <p>One Drive</p>
-      </div>
-      <div class="option-name">
-        <p>Dropbox</p>
-      </div>
-    </div>
   </div>
 
 </div>
