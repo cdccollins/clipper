@@ -1,8 +1,20 @@
+.input-button {
+  margin-left: 270px;
+}
+
+.form-actions {
+  margin: 0 auto;
+  background-color: transparent;
+  text-align: center;
+  display: inline-block;
+}
+
 .upload {
   border: 1px dashed #F6F6F6;
   margin-top: 50px;
   height: 300px;
 }
+
 .fa-cloud-upload-alt{
   font-size: 100px;
   color: #15B097;
