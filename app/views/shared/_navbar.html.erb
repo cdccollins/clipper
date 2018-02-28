@@ -5,14 +5,13 @@
   <% end %>
 
   <!-- Right Navigation -->
-    <div class="navbar-search">
-      <!-- add a search placeholder instead of button? -->
-      <%= form_tag videos_path, :method => 'get' do %>
-        <p>
-          <%= text_field_tag :search, params[:search], :class => 'search-field', placeholder: 'Search keyword...' %>
-        </p>
-      <% end %>
-    </div>
+    <% unless current_page?(root_path) %>
+      <div class="navbar-search">
+        <%= form_tag videos_path, :method => 'get' do %>
+          <p><%= text_field_tag :search, params[:search], :class => 'search-field', placeholder: 'Search keyword...' %></p>
+        <% end %>
+      </div>
+    <% end %>
 
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
@@ -48,6 +47,7 @@
     <% else %>
       <!-- Login link (when logged out) -->
       <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to t(".sign_up", default: "Sign Up"), new_user_registration_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <% end %>
   </div>
 
