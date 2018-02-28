@@ -1,29 +1,53 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-4">
-      <h2>Filter Search</h2>
-      <h4>Duration</h4>
-      <h4>Category</h4>
-      <h4>Location</h4>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-8">
-      <h1>Results</h1>
-    </div>
-  </div>
+<div class="container-results">
+  <div class="search-results">
 
-  <div class="row">
-    <% @videos.each do |video| %>
-      <div class="col-xs-12 col-md-6">
+    <div class="filter-search">
+      <div class="filter-option header">
+        <h2>Filter Search</h2>
+      </div>
+
+      <form>
+        <div class="filter-option">
+          <div class="form-group">
+            <label for="curation">Duration (seconds)</label>
+            <div class="slidecontainer">
+              <input type="range" min="1" max="120" value="30" class="slider" id="myRange">
+              <p id="demo"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="filter-option">
+          <div class="form-group">
+            <label for="category">Category</label>
+            <input type="category" class="form-control" id="category" placeholder="Nature...">
+          </div>
+        </div>
+
+        <div class="filter-option">
+          <div class="form-group">
+            <label for="category">Location</label>
+            <input type="location" class="form-control" id="location" placeholder="E2 8DY">
+          </div>
+        </div>
+
+        <div class="filter-option button">
+          <button type="submit" class="green-button">Filter</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="results">
+      <h1>Results</h1>
+
+      <% @videos.each do |video| %>
         <%= link_to video_path(video) do %>
           <div class="card">
           <div class="video"> <%= cl_video_tag(video.video.file.public_id, :width=>310, :crop=>"scale", autoplay: false) %></div>
           </div>
         <% end  %>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
+
   </div>
 </div>
-<%= link_to "Home", root_path %>
-<%= link_to "Show one video",

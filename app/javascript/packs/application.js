@@ -17,3 +17,6 @@ console.log("Hello from app/javascript/packs/application.js!");
 // hideVideo();
 import { hoverVideo } from '../components/cards';
 hoverVideo();
+
+import { valueSlider } from '../components/slider';
+valueSlider();
