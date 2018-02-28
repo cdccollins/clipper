@@ -17,6 +17,8 @@ gem 'sass-rails'
 gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
+gem 'jquery-rails' # Add this line if you use Rails 5.1
+
 
 group :development do
   gem 'web-console', '>= 3.3.0'

@@ -1,0 +1,38 @@
+.search-results {
+  position: relative;
+}
+
+.filter-search {
+  position: absolute;
+  top: 70px;
+  width: 350px;
+  height: 100vh;
+  border-right: solid 1px #d4d4d6;
+  margin-left: 0;
+  margin-bottom: 0;
+  background-color: white;
+  padding-left: 10px;
+}
+
+.results {
+  position: absolute;
+  left: 400px;
+  top: 70px;
+  h1 {
+    margin-bottom: 30px;
+  }
+}
+
+.filter-option {
+  margin-right: 30px;
+  margin-left: 20px;
+  margin-top: 25px;
+}
+
+.header {
+  padding-bottom: 0;
+}
+
+#demo {
+  margin-bottom: 0px;
+}
