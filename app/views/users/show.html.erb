@@ -15,49 +15,24 @@
     <div class="container align-middle video-container">
       <h2>My Uploaded Videos</h2><%= link_to 'Add new video', new_video_path %>
       <div class="row">
-        <div class="col-xs-12 col-md-4">
-          <div class="card">
-            <%= cl_video_tag("chat", :width=>320, :crop=>"scale", autoplay: true); %>
-            <p class= "video-description">@video.title</p>
+        <% @videos.each do |video| %>
+          <div class="col-xs-12 col-md-4">
+            <%= link_to video_path(video) do %>
+            <div class="card">
+              <div class="video"> <%= cl_video_tag(video.video.file.public_id, :crop=>"scale", autoplay: false, loop: true, preload: "auto", poster: true) %></div>
+              <p><%= video.title %></p>
+            </div>
+             <% end %>
+              <div class="content">
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="col-xs-12 col-md-4">
-          <div class="card">
-            <%= cl_video_tag("chat", :width=>320, :crop=>"scale", autoplay: true); %>
-            <p class= "video-description">@video.title</p>
-          </div>
-        </div>
-        <div class="col-xs-12 col-md-4">
-          <div class="card">
-            <%= cl_video_tag("chat", :width=>320, :crop=>"scale", autoplay: true); %>
-            <p class= "video-description">@video.title</p>
-          </div>
-        </div>
+        <% end %>
       </div>
     </div>
 
     <div class="container align-middle video-container">
       <h2>My Purchased Videos</h2>
-      <div class="row">
-        <div class="col-xs-12 col-md-4">
-          <div class="card">
-            <%= cl_video_tag("chat", :width=>320, :crop=>"scale", autoplay: true); %>
-            <p class= "video-description">@video.title</p>
-          </div>
-        </div>
-        <div class="col-xs-12 col-md-4">
-          <div class="card">
-            <%= cl_video_tag("chat", :width=>320, :crop=>"scale", autoplay: true); %>
-            <p class= "video-description">@video.title</p>
-          </div>
-        </div>
-        <div class="col-xs-12 col-md-4">
-          <div class="card">
-            <%= cl_video_tag("chat", :width=>320, :crop=>"scale", autoplay: true); %>
-            <p class= "video-description">@video.title</p>
-          </div>
-        </div>
-      </div>
     </div>
 
   </div>
