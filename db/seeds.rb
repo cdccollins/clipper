@@ -29,7 +29,7 @@ video = Video.new(
   title: "Test title",
   cloudinary_url: "https://res.cloudinary.com/dxtdzybai/video/upload/v1519733347/chat.mp4",
   user: user
-  tags: "cats"
+  tags: "cats nature documentary"
   )
 
 video.save!
