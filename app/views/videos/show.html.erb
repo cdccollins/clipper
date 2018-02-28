@@ -1,28 +1,15 @@
 <div class="container">
-  <div class="video-title-info">
-    <h1><%= @video.title %></h1>
-    <h4><%= @video.user.first_name + " " + @video.user.last_name %></h4>
+  <h1><%= @video.title %></h1>
+  <h3><%= @video.user.first_name + " " + @video.user.last_name %></h2>
+  <br>
+
+  <div class="video text-center"><%= cl_video_tag(@video.video.file.public_id, resource_type: :video,:width=>720, :crop=>"scale", controls: true) %></div>
+  <p><%= @video.description %></p>
+
+  <div class="video-footer">
+    <i class="fas fa-download"></i>
   </div>
 
-  <div class="main-video">
-    <div class="video video-sh"><%= cl_video_tag(@video.cloudinary_url, :crop=>"scale", controls: true, controlsList: "nodownload") %></div>
-    <div class="video-footer text-center">
-
-      <div class="video-footer-links">
-        <%= link_to user_path(@video.user_id) do %>
-          <%= image_tag "ssaunier.jpeg", id: "seb", :class => 'avatar'%>
-        <% end %>
-        <%= link_to edit_video_path(@video) do %>
-          <i class="fas fa-download"></i>
-        <% end %>
-      </div>
-
-      <p><%= @video.description %></p>
-    </div>
-  </div>
-
- <div class="video-link">
-    <div class="red-button"><%= link_to "Edit video", edit_video_path(@video) %>
-    </div>
-  </div>
+  <%= link_to "Edit video", edit_video_path(@video) %>
+  <%= link_to "View artist", user_path(@video.user_id) %>
 </div>
