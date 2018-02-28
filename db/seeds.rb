@@ -28,7 +28,7 @@ video = Video.new(
   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   title: "Test title",
   cloudinary_url: "https://res.cloudinary.com/dxtdzybai/video/upload/v1519733347/chat.mp4",
-  user: user
+  user: user,
   tags: "cats nature documentary"
   )
 
