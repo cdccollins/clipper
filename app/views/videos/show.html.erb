@@ -8,12 +8,16 @@
     </div>
     <div class="video-footer text-center">
       <div class="video-footer-links">
-        <%= link_to user_path(@video.user_id) do %>
-          <%= image_tag "ssaunier.jpeg", id: "seb", :class => 'avatar'%>
-        <% end %>
-        <%= link_to edit_video_path(@video) do %>
-          <i class="fas fa-download"></i>
-        <% end %>
+        <div class="each-link">
+          <%= link_to user_path(@video.user_id) do %>
+            <%= image_tag "ssaunier.jpeg", id: "seb", :class => 'avatar'%>
+          <% end %>
+        </div>
+        <div class="each-link">
+          <a href="#">
+            <i class="fas fa-download" data-toggle="modal" data-target="#myModal"></i>
+          </a>
+        </div>
       </div>
       <p><%= @video.description %></p>
     </div>
@@ -25,3 +29,38 @@
   </div>
 </div>
 
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center" id="exampleModalLabel">Pay for this Video</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="formGroupExampleInput">Card Holder's Name</label>
+            <input type="text" class="form-control" id="formGroupExampleInput">
+          </div>
+          <div class="form-group">
+            <label for="formGroupExampleInput2">Card Number</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2">
+          </div>
+          <div class="form-group">
+            <label for="formGroupExampleInput2">Card Type</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2">
+          </div>
+          <div class="form-group">
+            <label for="formGroupExampleInput2">CVC Code</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="green-button-large">Pay</button>
+      </div>
+    </div>
+  </div>
+</div>

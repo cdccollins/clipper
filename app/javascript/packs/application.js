@@ -22,3 +22,4 @@ hoverVideo();
 
 import { valueSlider } from '../components/slider';
 valueSlider();
+
