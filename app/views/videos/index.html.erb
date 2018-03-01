@@ -1,5 +1,5 @@
 
-<div class="container">
+<div class="container results">
   <div class="search-results">
 
     <div class="filter-search">
@@ -34,18 +34,17 @@
 
     <div class="results">
       <h1>Results</h1>
-      <div class="each-result">
-        <div class="row">
-          <% @videos.each do |video| %>
-            <div class="col-xs-12 col-sm-6">
-              <%= link_to video_path(video) do %>
-                <div class="card">
-                <div class="video"> <%= cl_video_tag(video.video.file.public_id, :width=>310, :crop=>"scale", autoplay: false) %></div>
+      <div class="row">
+        <% @videos.each do |video| %>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <%= link_to video_path(video) do %>
+              <div class="card result">
+                <div class="video"> <%= cl_video_tag(video.video.file.public_id, :width=>250, :height=>175, :crop=>"lpad", autoplay: false) %>
                 </div>
-              <% end %>
-            </div>
-          <% end %>
-        </div>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
       </div>
     </div>
 
