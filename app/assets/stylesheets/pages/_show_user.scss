@@ -1,6 +1,19 @@
+.container {
+  padding-top:70px;
+  display:flex;
+  flex-direction: column;
+}
 
-.user-videos {
-  margin: 100px;
+.user-container {
+  margin: 30px;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-image {
+  position: absolute;
+
 }
 
 .video-container {
@@ -35,15 +48,10 @@
 }
 
 .user_name {
+  display: flex;
   padding: 0;
   margin: 0;
   position: absolute;
   top: 10px;
   left: 40px;
-}
-.user-banner {
-  margin-top: 100px;
-  margin-left:100px;
-  position: relative;
-  display: flex;
 }
