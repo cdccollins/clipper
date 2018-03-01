@@ -1,32 +1,33 @@
 <div class="container">
   <div class="video-info">
-    <h1><%= @video.title %></h1><h4><%= @video.user.first_name + " " + @video.user.last_name %></h4>
-    <%= link_to user_path(@video.user_id) do %>
-      <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", id: "seb", :class => 'avatar video-owner' %>
-    <% end %>
+    <h1 class="video-title"><%= @video.title %></h1>
+    <div class="video-owner">
+      <h4><%= @video.user.first_name + " " + @video.user.last_name %></h4>
+      <%= link_to user_path(@video.user_id) do %>
+        <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", id: "seb", :class => 'show-avatar' %>
+      <% end %>
+    </div>
   </div>
-  <br>
 
   <div class="main-video">
-    <div class="video"><%= cl_video_tag(@video.video.file.public_id, resource_type: :video,:width=>1100, :crop=>"scale", controls: true, controlsList: "nodownload") %>
+    <div class="video-show"><%= cl_video_tag(@video.video.file.public_id, resource_type: :video,:width=>720, :crop=>"scale", controls: true, controlsList: "nodownload") %>
     </div>
-    <div class="video-footer text-center">
-      <div class="video-footer-links">
-        <div class="each-link">
-          <a href="#">
-            <i class="fas fa-download" data-toggle="modal" data-target="#myModal"></i>
-          </a>
+
+    <p class="vid-desc"><%= @video.description %></p>
+  </div>
+  <div class="video-footer">
+    <div class="video-footer-links">
+      <a href="#">
+        <i class="fas fa-download" data-toggle="modal" data-target="#myModal"></i>
+      </a>
+      <div class="video-link">
+        <div class="green-button"><%= link_to "Edit video", edit_video_path(@video) %>
         </div>
       </div>
-      <p><%= @video.description %></p>
-    </div>
-  </div>
-
-  <div class="video-link">
-    <div class="green-button"><%= link_to "Edit video", edit_video_path(@video) %>
     </div>
   </div>
 </div>
+
 
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
