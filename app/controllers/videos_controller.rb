@@ -4,9 +4,8 @@ class VideosController < ApplicationController
 
   def index
     @videos = policy_scope(Video).order(created_at: :desc)
-    if params[:query].present?
-      sql_query = "title ILIKE :query OR syllabus ILIKE :query"
-      @videos = Video.where(sql_query, query: "%#{params[:query]}%")
+    if params[:search].present?
+      @videos = Video.search_by_title_and_description(params[:search])
     else
       @videos = Video.all
     end
