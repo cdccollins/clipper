@@ -6,47 +6,46 @@
         <h2>Filter Search</h2>
       </div>
 
-      <form>
+      <%= form_tag videos_path, method: :get do %>
         <div class="filter-option">
           <div class="form-group">
-            <label for="curation">Duration (seconds)</label>
-            <div class="slidecontainer">
-              <input type="range" min="1" max="120" value="30" class="slider" id="myRange">
-              <p id="demo"></p>
-            </div>
+            <label for="Duration">Search</label>
+            <p>
+            <%= text_field_tag :search, params[:search], :class => 'search-field' %>
+            </p>
           </div>
         </div>
 
         <div class="filter-option">
           <div class="form-group">
-            <label for="category">Category</label>
-            <input type="category" class="form-control" id="category" placeholder="Nature...">
-          </div>
-        </div>
-
-        <div class="filter-option">
-          <div class="form-group">
-            <label for="category">Location</label>
-            <input type="location" class="form-control" id="location" placeholder="E2 8DY">
+            <label for="Duration">Duration</label>
+            <p>
+            <%= text_field_tag :duration, params[:duration], :class => 'search-field'%>
+            </p>
           </div>
         </div>
 
         <div class="filter-option button">
-          <button type="submit" class="green-button">Filter</button>
+          <%= submit_tag "Search", :name => nil, :class => 'green-button' %>
         </div>
-      </form>
+      <% end %>
     </div>
 
     <div class="results">
       <h1>Results</h1>
-
-      <% @videos.each do |video| %>
-        <%= link_to video_path(video) do %>
-          <div class="card">
-          <div class="video"> <%= cl_video_tag(video.video.file.public_id, :width=>310, :crop=>"scale", autoplay: false) %></div>
-          </div>
-        <% end %>
-      <% end %>
+      <div class="each-result">
+        <div class="row">
+          <% @videos.each do |video| %>
+            <div class="col-xs-12 col-sm-6">
+              <%= link_to video_path(video) do %>
+                <div class="card">
+                <div class="video"> <%= cl_video_tag(video.video.file.public_id, :width=>310, :crop=>"scale", autoplay: false) %></div>
+                </div>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+      </div>
     </div>
 
   </div>
