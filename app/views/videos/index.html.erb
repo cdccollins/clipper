@@ -39,7 +39,7 @@
           <div class="col-sm-12 col-md-6 col-lg-4">
             <%= link_to video_path(video) do %>
               <div class="card result">
-                <div class="video"> <%= cl_video_tag(video.video.file.public_id, :width=>250, :height=>175, :crop=>"lpad", autoplay: false) %>
+                <div class="video"> <%= cl_video_tag(video.video.file.public_id, :width=>250, :height=>175, :crop=>"lpad", :background=>"black", autoplay: false) %>
                 </div>
               </div>
             <% end %>
