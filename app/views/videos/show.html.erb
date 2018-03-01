@@ -4,7 +4,7 @@
     <div class="video-owner">
       <h4><%= @video.user.first_name + " " + @video.user.last_name %></h4>
       <%= link_to user_path(@video.user_id) do %>
-        <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", id: "seb", :class => 'show-avatar' %>
+        <%= cl_image_tag @video.user.photo, id: "seb", :class => 'show-avatar' %>
       <% end %>
     </div>
   </div>

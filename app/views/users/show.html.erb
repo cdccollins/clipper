@@ -4,7 +4,11 @@
   <div class="user-container">
     <div class="user-name">
       <%#= cl_image_path @user.profile_picture, :class => "avatar-large" %>
-      <%= image_tag 'https://kitt.lewagon.com/placeholder/users/ssaunier', :class => "avatar-large user-image" %>
+      <% if @user.photo == nil %>
+        <i class="fas fa-user"></i>
+      <% else %>
+        <%= cl_image_tag @user.photo, :class => "avatar-large user-image" %>
+      <% end %>
       <div class = "name text-center">
         <h1><%= @user.first_name%> <%= @user.last_name %> </h1>
       </div>
