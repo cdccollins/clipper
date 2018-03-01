@@ -1,5 +1,5 @@
 class VideosController < ApplicationController
-  before_action :find_video, only: [:show, :edit, :delete, :update]
+  before_action :find_video, only: [:show, :edit, :destroy, :update]
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index

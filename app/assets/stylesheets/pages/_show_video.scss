@@ -5,7 +5,7 @@
 }
 .video-title {
   background-color: #e8e8e8;
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 20px;
   margin-top: 75px;
   margin-left: 25px;
@@ -15,7 +15,7 @@
 }
 .video-owner {
   background-color: #e8e8e8;
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 20px;
   display: flex;
   flex-direction: row;
@@ -28,7 +28,7 @@
 }
 .main-video {
   background-color: #e8e8e8;
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 20px;
   display: flex;
   flex-direction: row;
@@ -76,11 +76,6 @@ a :hover{
   }
 }
 
-.video-footer-links {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
 
 .fa-download {
   font-size: 50px;
