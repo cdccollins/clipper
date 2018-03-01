@@ -1,3 +1,6 @@
+.home-container {
+  padding-top: 0 !important;
+}
 .search-field {
   border-radius: 5px;
   color: black;
@@ -5,7 +8,8 @@
 
 #wrapper h1 {
   margin-left: 30px;
-  color: #15B097;
+  color: rgb(220,220,220);
+  text-shadow: 1px 1px 1px #15B097;
 }
 
 .home-banner {
