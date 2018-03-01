@@ -18,7 +18,18 @@
 // hideVideo();
 // import { hoverVideo } from '../components/cards';
 // hoverVideo();
+//= require sweetalert2
+//= require jquery
+//= require jquery_ujs
+//= require turbolinks
+//= require jquery.turbolinks
+//= require bootstrap-sprockets
+//= require sweet-alert-confirm
+//= require_tree .
 
 import { valueSlider } from '../components/slider';
 valueSlider();
+
+// import { bindSweetAlertButtonDemo } from '../components/banner';
+// bindSweetAlertButtonDemo();
 
