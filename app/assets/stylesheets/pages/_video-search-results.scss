@@ -1,3 +1,9 @@
+.container.results {
+  margin-left: -415px;
+  padding-top: 0px;
+  margin-top: -70px;
+}
+
 .search-results {
   position: relative;
 }
@@ -6,7 +12,7 @@
   position: absolute;
   top: 70px;
   width: 350px;
-  height: 100vh;
+  height: 900px;
   border-right: solid 1px #d4d4d6;
   margin-left: 0;
   margin-bottom: 0;
@@ -18,21 +24,34 @@
   position: absolute;
   left: 400px;
   top: 70px;
+  right: -160px;
   h1 {
     margin-bottom: 30px;
+    margin-top: 30px;
+    font-size: 50px;
   }
 }
 
 .filter-option {
-  margin-right: 30px;
+  margin-right: 20px;
   margin-left: 20px;
-  margin-top: 25px;
+  margin-top: 50px;
+  .search-field {
+    width: 250px;
+  }
+}
+
+.card.result {
+  margin-bottom: 20px;
+  margin-left: 20px;
+  p {
+    margin: 0px;
+  }
 }
 
 .header {
   padding-bottom: 0;
-}
-
-#demo {
-  margin-bottom: 0px;
+  h2 {
+    font-size: 40px;
+  }
 }
