@@ -1,25 +1,37 @@
 <div class="container">
-  <div class="video-info">
+  <div class="video-title-holder">
     <h1 class="video-title"><%= @video.title %></h1>
     <div class="video-owner">
       <h4><%= @video.user.first_name + " " + @video.user.last_name %></h4>
       <%= link_to user_path(@video.user_id) do %>
-        <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", id: "seb", :class => 'show-avatar' %>
+        <%= cl_image_tag @video.user.photo, id: "seb", :class => 'show-avatar' %>
       <% end %>
     </div>
   </div>
 
   <div class="main-video">
-    <div class="video-show"><%= cl_video_tag(@video.video.file.public_id, resource_type: :video,:width=>720, :crop=>"scale", controls: true, controlsList: "nodownload") %>
+    <div class="video-show"><%= cl_video_tag(@video.video.file.public_id, resource_type: :video,:width=>720, :height=>405, :crop=>"lpad", :background=>"black", controls: true, controlsList: "nodownload") %>
     </div>
 
-    <p class="vid-desc"><%= @video.description %></p>
+    <div class="video-info">
+      <div class="video-owner">
+        <%= link_to user_path(@video.user_id) do %>
+          <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", id: "seb", :class => 'show-avatar' %>
+        <% end %>
+        <h4><%= @video.user.first_name + " " + @video.user.last_name %></h4>
+      </div>
+      <p class="vid-desc"><%= @video.description %></p>
+      <div class="tags-and-download">
+        <p class="vid-tags">Tags: <%= @video.tags %></p>
+        <a href="#">
+          <i class="fas fa-download" data-toggle="modal" data-target="#myModal"></i>
+        </a>
+      </div>
+    </div>
   </div>
+
   <div class="video-footer">
     <div class="video-footer-links">
-      <a href="#">
-        <i class="fas fa-download" data-toggle="modal" data-target="#myModal"></i>
-      </a>
       <div class="video-link">
         <div class="green-button"><%= link_to "Edit video", edit_video_path(@video) %>
         </div>
