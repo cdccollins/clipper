@@ -8,9 +8,11 @@
       <% end %>
     </div>
   </div>
+
   <div class="main-video">
     <div class="video-show"><%= cl_video_tag(@video.video.file.public_id, resource_type: :video,:width=>720, :crop=>"scale", controls: true, controlsList: "nodownload") %>
     </div>
+
     <p class="vid-desc"><%= @video.description %></p>
   </div>
   <div class="video-footer">

@@ -4,9 +4,13 @@ class VideosController < ApplicationController
 
   def index
     @videos = policy_scope(Video).order(created_at: :desc)
-    if params[:query].present?
-      sql_query = "title ILIKE :query OR syllabus ILIKE :query"
-      @videos = Video.where(sql_query, query: "%#{params[:query]}%")
+    if params[:search].present? && params[:duration].present?
+      @videos = Video.search_everything(params[:search])
+      @videos = @videos.where("duration <= ?", params[:duration].to_i)
+    elsif params[:duration]
+      @videos = Video.search_everything(params[:search])
+    elsif params[:search].present?
+      @videos = Video.search_everything(params[:search])
     else
       @videos = Video.all
     end
@@ -55,6 +59,6 @@ class VideosController < ApplicationController
   end
 
   def video_params
-    params.require(:video).permit(:title, :description, :tags, :price, :location, :video)
+    params.require(:video).permit(:title, :description, :tags, :price, :location, :video, :duration)
   end
 end
