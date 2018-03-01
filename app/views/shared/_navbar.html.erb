@@ -8,7 +8,7 @@
     <% unless current_page?(root_path) || current_page?('/users/sign_in') || current_page?('/users/sign_up')|| current_page?('/videos/new') %>
       <div class="navbar-search">
         <%= form_tag videos_path, :method => 'get' do %>
-          <p><%= text_field_tag :search, params[:search], :class => 'navbar-search-field', placeholder: 'Search keyword...' %>
+          <p><%= text_field_tag :search, params[:search], :class => 'navbar-search-field', placeholder: 'Search' %>
               <%= submit_tag "Search", :name => nil, :class => 'btn-success navbar-button' %>
           </p>
         <% end %>

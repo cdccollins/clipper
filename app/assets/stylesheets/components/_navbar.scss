@@ -4,7 +4,7 @@
   background-color:  #313638;
   transition: all 0.3s ease;
   height: 70px;
-  padding: 0px 30px;
+  padding: 0px 0px 0px 30px;
   display: flex;
   width: 100vw;
   align-items: center;
@@ -16,6 +16,13 @@
   border-radius: 5px;
   color: black;
   z-index: auto;
+  width:300px;
+  font-family: "courier";
+  border: none;
+}
+
+.navbar-button {
+  border-radius: 5px;
 }
 
 .navbar-wagon-home {
