@@ -3,17 +3,25 @@
   <div class="upload text-center">
     <i class="fas fa-cloud-upload-alt"></i>
     <br>
-    <%= simple_form_for(@video) do |f| %>
-    <div class="form-actions text-center">
-      <div class="input-button">
-      <%= f.input :video %>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+      <div class="form">
+        <%= simple_form_for(@video) do |f| %>
+        <div class="form-actions text-center">
+          <%= f.input :title %>
+          <%= f.input :description %>
+          <%= f.input :tags %>
+          <%= f.input :price %>
+          <%= f.input :location %>
+          <%= f.input :duration, label: "Duration in seconds" %>
+          <div class="input-button">
+            <%= f.input :video %>
+          </div>
+          <%= f.submit "Add video"%>
+        </div>
+        <% end %>
       </div>
-    <%= f.submit "Add video"%>
     </div>
-  </br>
-    </div>
-    <% end %>
   </div>
-
 </div>
 

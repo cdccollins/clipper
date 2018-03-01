@@ -16,8 +16,8 @@
 
 // import { hideVideo } from '../components/cards';
 // hideVideo();
-import { hoverVideo } from '../components/cards';
-hoverVideo();
+// import { hoverVideo } from '../components/cards';
+// hoverVideo();
 
 import { valueSlider } from '../components/slider';
 valueSlider();

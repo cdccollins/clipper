@@ -5,8 +5,8 @@ class Video < ApplicationRecord
 
   include PgSearch
 
-  pg_search_scope :search_by_title_and_description,
-    against: [ :title, :description, :tags, :location ],
+  pg_search_scope :search_everything,
+    against: [ :title, :description, :tags, :location, :duration ],
     using: {
       tsearch: { prefix: true }
     }
