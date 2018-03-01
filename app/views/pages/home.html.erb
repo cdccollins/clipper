@@ -37,12 +37,10 @@
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
 
-<script>
+<%= javascript_pack_tag "navbar" %>
+
+<!-- <script>
     const navbar = document.querySelector('.navbar-wagon');
   navbar.classList.add('navbar-wagon-home');
   window.addEventListener('scroll', () => {
@@ -54,11 +52,10 @@
       navbar.classList.remove('navbar-wagon-home');
     }
   });
-</script>
+
+</script> -->
 
 <%= javascript_pack_tag 'cards' %>
-
-
 
 <%#= javascript_pack_tag "../components/navbar" %>
 <%#= javascript_include_tag "../app/javascript/components/navbar" %> <!-- from app/assets/javascripts/application.js -->

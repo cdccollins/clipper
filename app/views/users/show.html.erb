@@ -1,26 +1,34 @@
-    <%#= cl_image_path @user.profile_picture, :class => "avatar-large" %>
+
 <div class="container">
 
   <div class="user-container">
-    <%= image_tag 'https://kitt.lewagon.com/placeholder/users/ssaunier', :class => "avatar-large user-image" %>
-    <div class = "user-name text-center">
-      <h1><%= @user.first_name%> <%= @user.last_name %> </h1>
+    <div class="user-name">
+      <%#= cl_image_path @user.profile_picture, :class => "avatar-large" %>
+      <%= image_tag 'https://kitt.lewagon.com/placeholder/users/ssaunier', :class => "avatar-large user-image" %>
+      <div class = "name text-center">
+        <h1><%= @user.first_name%> <%= @user.last_name %> </h1>
+      </div>
+      <div class="user-content">
+        <p>About Me: <%= @user.about_me %></p>
+      </div>
+
     </div>
-    <div class="user-content text-center">
-      <p>About Me: <%= @user.about_me %></p>
-    </div>
+
+
   </div>
 
   <div class="video-container">
-    <h2>My Uploaded Videos</h2>
-    <%= link_to 'Add new video', new_video_path %>
+    <div class="video-title">
+      <h2>My Uploaded Videos</h2>
+      <%= link_to 'Add video', new_video_path, :class => "green-button" %>
+    </div>
+
     <div class="row">
       <% @videos.each do |video| %>
-        <div class="col-xs-12 col-sm-4">
+        <div class="col-xs-12 col-sm-4 user-page-video">
           <%= link_to video_path(video) do %>
-            <div class="card">
-             <!-- style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');"> -->
-               <%= cl_video_tag(video.video.file.public_id, :crop=>"scale", autoplay: false, loop: true, preload: "auto", poster: true) %>
+            <div class="card user-page-video-card">
+               <%= cl_video_tag(video.video.file.public_id, :height=>175, :crop=>"scale", autoplay: false, loop: true, preload: "auto", poster: true) %>
             </div>
             <p> <%= video.title %></p>
           <% end %>
@@ -32,14 +40,15 @@
   <br>
 
   <div class="video-container">
-    <h2>My Purchased Videos</h2>
+    <div class="video-title">
+      <h2>My Purchased Videos</h2>
+    </div>
     <div class="row">
       <% @videos.each do |video| %>
-        <div class="col-xs-12 col-sm-4">
+        <div class="col-xs-12 col-sm-4 user-page-video">
           <%= link_to video_path(video) do %>
-            <div class="card">
-            <!-- style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');" -->
-               <%= cl_video_tag(video.video.file.public_id, :crop=>"scale", autoplay: false, loop: true, preload: "auto", poster: true) %>
+            <div class="card user-page-video-card">
+               <%= cl_video_tag(video.video.file.public_id, :height=>175, :crop=>"scale", autoplay: false, loop: true, preload: "auto", poster: true) %>
             </div>
             <p> <%= video.title %></p>
           <% end %>
@@ -47,6 +56,8 @@
       <% end %>
     </div>
   </div>
+
+
 </div>
 
 <%= javascript_pack_tag 'cards' %>
@@ -60,3 +71,4 @@
     </div>
 
   </div> -->
+
