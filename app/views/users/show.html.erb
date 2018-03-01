@@ -18,17 +18,17 @@
   </div>
 
   <div class="video-container">
-    <div class="video-title">
+    <div class="profile-video-title">
       <h2>My Uploaded Videos</h2>
       <%= link_to 'Add video', new_video_path, :class => "green-button" %>
     </div>
 
-    <div class="row">
+    <div class="row user-page-all-videos">
       <% @videos.each do |video| %>
         <div class="col-xs-12 col-sm-4 user-page-video">
           <%= link_to video_path(video) do %>
             <div class="card user-page-video-card">
-               <%= cl_video_tag(video.video.file.public_id, :height=>175, :crop=>"scale", autoplay: false, loop: true, preload: "auto", poster: true) %>
+               <%= cl_video_tag(video.video.file.public_id, :height=>175, :width=>300, :crop=>"lpad", :background=>"black", autoplay: false, loop: true, preload: "auto", poster: true) %>
             </div>
             <p> <%= video.title %></p>
           <% end %>
@@ -37,18 +37,16 @@
     </div>
   </div>
 
-  <br>
-
   <div class="video-container">
-    <div class="video-title">
+    <div class="profile-video-title">
       <h2>My Purchased Videos</h2>
     </div>
-    <div class="row">
+    <div class="row user-page-all-videos">
       <% @videos.each do |video| %>
         <div class="col-xs-12 col-sm-4 user-page-video">
           <%= link_to video_path(video) do %>
             <div class="card user-page-video-card">
-               <%= cl_video_tag(video.video.file.public_id, :height=>175, :crop=>"scale", autoplay: false, loop: true, preload: "auto", poster: true) %>
+               <%= cl_video_tag(video.video.file.public_id, :height=>175, :width=>300, :crop=>"lpad", :background=>"black", autoplay: false, loop: true, preload: "auto", poster: true) %>
             </div>
             <p> <%= video.title %></p>
           <% end %>
