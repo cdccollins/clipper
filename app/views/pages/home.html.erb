@@ -11,51 +11,26 @@
     <% end %>
   </div>
 </div>
-
-<div id="wrapper">
-  <h1>Today's Most Popular Videos</h1>
-  <div class="container align-middle">
-    <div class="row">
-      <% @videos.each do |video| %>
-        <div class="col-xs-12 col-md-4">
-          <%= link_to video_path(video) do %>
-            <div class="card">
-              <div class="video"> <%= cl_video_tag(video.video.file.public_id, :crop=>"scale", autoplay: false, loop: true, preload: "auto", poster: true, width: 300, height: 200) %>
+<div class="container home-container">
+  <div id="wrapper">
+    <h1>Today's Most Popular Videos</h1>
+    <div class="container align-middle">
+      <div class="row">
+        <% @videos.each do |video| %>
+          <div class="col-xs-12 col-md-4">
+            <%= link_to video_path(video) do %>
+              <div class="card">
+                <div class="video"> <%= cl_video_tag(video.video.file.public_id, :crop=>"scale", autoplay: false, loop: true, preload: "auto", poster: true, width: 300, height: 175) %>
+                </div>
+                <p><%= video.title %></p>
               </div>
-              <p><%= video.title %></p>
-            </div>
-          <% end %>
-        </div>
-      <% end %>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
 <%= javascript_pack_tag "navbar" %>
-
-<!-- <script>
-    const navbar = document.querySelector('.navbar-wagon');
-  navbar.classList.add('navbar-wagon-home');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY === null) {
-      navbar.classList.add('navbar-wagon-home');
-    } else if (window.scrollY < screen.height * 0.7) {
-      navbar.classList.add('navbar-wagon-home');
-    } else {
-      navbar.classList.remove('navbar-wagon-home');
-    }
-  });
-
-</script> -->
-
 <%= javascript_pack_tag 'cards' %>
-
-<%#= javascript_pack_tag "../components/navbar" %>
-<%#= javascript_include_tag "../app/javascript/components/navbar" %> <!-- from app/assets/javascripts/application.js -->
