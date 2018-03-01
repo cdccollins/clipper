@@ -1,57 +1,76 @@
 .container {
   padding-top:70px;
-  display:flex;
-  flex-direction: column;
 }
 
 .user-container {
   margin: 30px;
-  height: 20vh;
   display: flex;
+  background-color: #F6F8FA;
   flex-direction: column;
+  border-radius: 20px;
 }
 
 .user-image {
+  margin: 10px;
+
+}
+
+.user-content {
+  margin: 10px;
   position: absolute;
+  left: 250px;
+  top: 80px;
 
 }
 
 .video-container {
   margin:20px;
   background-color: #F6F8FA;
+  border-radius: 20px;
 }
 
-
-.video-wrap {
-  position: relative;
-  height: 200px;
-  width: 257px;
-}
-
-.video-description {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.2);
-  color: #fff;
-  visibility: hidden;
-  opacity: 0;
-
-  transition: opacity .2s, visibility .2s;
-}
-
-.video-wrap:hover .video-description {
-  visibility: visible;
-  opacity: 1;
-}
-
-.user_name {
+.user-name {
   display: flex;
   padding: 0;
   margin: 0;
-  position: absolute;
-  top: 10px;
-  left: 40px;
+  position: relative;
 }
+
+.name {
+  position: absolute;
+  left: 250px;
+  top: 10px;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.video-title {
+  margin:10px;
+  display: flex;
+  position: relative;
+  .green-button {
+    flex-direction: row;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 15px;
+    height: 30px;
+    width: 90px;
+  }
+}
+
+.user-page-video {
+  a {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+  }
+}
+
+.user-page-video-card {
+
+}
+
+

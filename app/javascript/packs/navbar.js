@@ -18,5 +18,5 @@ console.log("Hello!")
 
 
 
-export { initUpdateNavbarOnScroll };
+initUpdateNavbarOnScroll();
 
