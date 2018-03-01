@@ -8,12 +8,16 @@
   color: white;
 }
 .alert-info {
-  background: $green;
+  background: rgba(50,183,150,0.3);
 }
 .alert-warning {
-  background: $red;
+  background: rgba(238,95,91,0.3);
 }
 .alert.alert-server {
   margin-bottom: 0;
   border-radius: 0;
-}
+  margin-top: 70px;
+  position: absolute;
+  width: 100vw;
+  border: none;
+};
