@@ -8,15 +8,15 @@
 
 #wrapper h1 {
   margin-left: 30px;
-  color: rgb(220,220,220);
-  text-shadow: 1px 1px 1px #15B097;
+  color: rgb(100,100,100);
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
 }
 
 .home-banner {
   position: relative;
 }
 .home-banner h1 {
-    color: white;
+  color: white;
 }
 
 .home-nav {
@@ -27,12 +27,7 @@
 .navbar-wagon-black {
   background-color: #313638 !important;
 }
-
-.logout {
-  margin: 0 auto;
-  margin-bottom: 20px;
-}
-
-.logout a {
-  color: #FFFFFF;
+.home-card-title {
+  margin-bottom: 0px;
+  color: rgb(100,100,100);
 }
