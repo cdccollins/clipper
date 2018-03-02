@@ -51,7 +51,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <h2>Cost - <%= @video.price %></h2>
+        <h2>Cost: £ <%= @video.price %></h2>
         <div class="form">
         <%= simple_form_for([@video, @transaction]) do |f| %>
           <div class="form-actions">
