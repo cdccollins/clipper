@@ -5,13 +5,18 @@ function bindSweetAlertButtonDemo() {
     swal({
       title: "Payment successful",
       text: "You are now the proud owner of a great video !",
-      icon: "success"
+      icon: "success",
+      timer:3000,
+      showConfirmationButton: false
     })
-    document.querySelector('.swal-button').addEventListener('click', () => {
-      console.log('hello');
-      window.location.reload();
-    });
+    event.preventDefault();
+// Event.preventDefault();
+    // document.querySelector('.swal-button').addEventListener('click', () => {
+    //   window.location.reload();
+
+
   });
+
 }
 
 
