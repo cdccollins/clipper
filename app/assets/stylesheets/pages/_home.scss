@@ -2,20 +2,18 @@
   padding-top: 0 !important;
 }
 
-
 #wrapper h1 {
-  margin-left: 30px;
   color: rgb(100,100,100);
   text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+  margin-bottom: 20px;
+  font-size: 32px;
 }
-
 .home-banner {
   position: relative;
 }
 .home-banner h1 {
   color: white;
 }
-
 .home-nav {
   background-color: transparent;
   position: fixed;
@@ -24,9 +22,30 @@
 .navbar-wagon-black {
   background-color: #313638 !important;
 }
+.home-video {
+  position: relative;
+}
 .home-card-title {
   margin-bottom: 0px;
-  color: rgb(100,100,100);
+  color: #efefef;
+  margin-left: 5px;
+  font-size: 16px;
+  position: absolute;
+  top: 150px;
+  z-index: 1;
+}
+.home-videos {
+  padding-top: 20px;
+  background: radial-gradient(circle, #d2d4d4, #efefef);
+  border-radius: 5px;
+}
+.home-videos-each {
+  background-color: #efefef;
+  border-radius: 10px;
+}
+.home-video-cards-center {
+  display: flex;
+  justify-content: space-around;
 }
 
 .banner-button-field {
