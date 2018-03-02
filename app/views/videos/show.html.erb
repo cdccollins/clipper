@@ -34,7 +34,7 @@
         <div class="video-link">
           <div class="green-button"><%= link_to "Edit video", edit_video_path(@video) %>
           </div>
-          <div class="red-button"><%= link_to "Delete video", video_path(@video), :method => :delete %>
+          <div class="red-button"><%= link_to "Delete video", root_path, method: :delete %>
           </div>
         </div>
       </div>
