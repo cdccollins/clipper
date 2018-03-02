@@ -7,7 +7,7 @@ function initUpdateNavbarOnScroll() {
   window.addEventListener('scroll', () => {
     if (window.scrollY === null) {
       navbar.classList.add('navbar-wagon-home');
-    } else if (window.scrollY < screen.height * 0.7) {
+    } else if (window.scrollY < screen.height * 1) {
       navbar.classList.add('navbar-wagon-home');
     } else {
       navbar.classList.remove('navbar-wagon-home');
