@@ -15,8 +15,4 @@ class TransactionsController < ApplicationController
     authorize @transaction
     redirect_to video_path(@video)
   end
-
-  private
-  def transaction_params
-  end
 end
