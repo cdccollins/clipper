@@ -25,7 +25,7 @@
     </div>
 
     <div class="row user-page-all-videos">
-      <% @videos.each do |video| %>
+      <% current_user.videos.each do |video| %>
         <div class="col-xs-12 col-sm-4 user-page-video">
           <%= link_to video_path(video) do %>
             <div class="card user-page-video-card">
