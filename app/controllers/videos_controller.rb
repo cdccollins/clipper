@@ -49,7 +49,7 @@ class VideosController < ApplicationController
 
   def destroy
     @video.destroy
-    redirect_to user_path
+    redirect_to root_path
   end
 
   private
