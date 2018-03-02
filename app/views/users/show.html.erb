@@ -9,13 +9,10 @@
       <% else %>
         <%= cl_image_tag @user.photo, :class => "avatar-large user-image" %>
       <% end %>
-      <div class = "name text-center">
+      <div class = "name">
         <h1><%= @user.first_name%> <%= @user.last_name %> </h1>
-      </div>
-      <div class="user-content">
         <p>About Me: <%= @user.about_me %></p>
       </div>
-
     </div>
 
 
@@ -64,13 +61,4 @@
 
 <%= javascript_pack_tag 'cards' %>
 
-<!--   <div class="user-videos video-wrap">
-    <div class="align-middle video-container">
-      </div>
-    </div>
-
-    <div class="align-middle video-container">
-    </div>
-
-  </div> -->
 
