@@ -25,7 +25,7 @@
     </div>
 
     <div class="row user-page-all-videos">
-      <% current_user.videos.each do |video| %>
+      <% @user.videos.each do |video| %>
         <div class="col-xs-12 col-sm-4 home-video-cards-center">
           <%= link_to video_path(video) do %>
             <div class="card home-card">
@@ -44,7 +44,7 @@
     </div>
     <div class="row user-page-all-videos">
       <% videos = [] %>
-      <% current_user.transactions.each do |transaction| %>
+      <% @user.transactions.each do |transaction| %>
         <% videos << transaction.video %>
       <% end  %>
       <% videos.each do |video| %>
