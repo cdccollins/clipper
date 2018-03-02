@@ -11,20 +11,22 @@
 .filter-search {
   position: absolute;
   top: 70px;
-  width: 350px;
+  width: 300px;
   height: 900px;
-  border-right: solid 1px #d4d4d6;
+  border-radius: 32px 32px 0 0;
   margin-left: 0;
   margin-bottom: 0;
-  background-color: white;
-  padding-left: 10px;
+  background-color: rgb(190, 190, 190);
+  // padding-left: 10px;
+  box-shadow: -5px 10px 20px;
 }
+
 
 .results {
   position: absolute;
   left: 400px;
   top: 70px;
-  right: -160px;
+  right: -200px;
   h1 {
     margin-bottom: 30px;
     margin-top: 30px;
@@ -37,16 +39,40 @@
   margin-left: 20px;
   margin-top: 50px;
   .search-field {
-    width: 250px;
+    width: 220px;
+    border-radius: 5px;
+    color: black;
+    z-index: auto;
+    font-family: "courier";
+    border: none;
+    padding-left: 10px;
+  }
+  .green-button {
+    width: 220px;
+    border: none;
   }
 }
 
-.card.result {
-  margin-bottom: 20px;
-  margin-left: 20px;
+.results-page-video {
   p {
-    margin: 0px;
+    text-align: center;
+    margin-bottom: 20px;
   }
+  a {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+  }
+
+}
+
+.results-page-video-card {
+  margin-bottom:5px
+  // margin-bottom: 20px;
+  // margin-left: 20px;
+  // p {
+  //   margin: 0px;
+  // }
 }
 
 .header {
@@ -54,4 +80,8 @@
   h2 {
     font-size: 40px;
   }
+}
+
+.button-filter {
+  margin:auto;
 }
