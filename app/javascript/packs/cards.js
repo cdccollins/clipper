@@ -19,6 +19,8 @@ const hoverVideo = () => {
   videos.forEach((video) => {
     video.setAttribute("onmouseenter", "this.play()")
     video.setAttribute("onmouseleave", "this.pause()")
+    // video.onmouseover = javascript-hover.classList("onmouseenter", "this.addClass display-title")
+    // video.setAttribute("onmouseleave", "this.removeClass display-title")
   })
 }
 
