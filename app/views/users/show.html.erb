@@ -4,8 +4,8 @@
   <div class="user-container">
     <div class="user-name">
       <%#= cl_image_path @user.profile_picture, :class => "avatar-large" %>
-      <% if @user.photo == nil %>
-        <i class="fas fa-user"></i>
+      <% if @user.photo.file == nil %>
+        <%= image_tag "user-icon.png", :class => "avatar-large user-image" %>
       <% else %>
         <%= cl_image_tag @user.photo, :class => "avatar-large user-image" %>
       <% end %>

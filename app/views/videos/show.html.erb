@@ -10,7 +10,11 @@
     <div class="video-info">
       <div class="video-owner">
         <%= link_to user_path(@video.user_id) do %>
-          <%= image_tag @video.user.photo, id: "seb", :class => 'show-avatar' %>
+          <% if @video.user.photo.file == nil %>
+            <%= image_tag "user-icon.png", :id => "seb", :class => "show-avatar" %>
+          <% else %>
+            <%= cl_image_tag @video.user.photo, :id => "seb", :class => "show-avatar" %>
+          <% end %>
         <% end %>
         <h4><%= @video.user.first_name + " " + @video.user.last_name %></h4>
       </div>
