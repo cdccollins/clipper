@@ -1,5 +1,5 @@
 body {
-  background-color: rgba(49, 54, 56,0.25);
+  background-color:rgba(79, 84, 86, 0.25);
 }
 
 .container {
@@ -29,7 +29,6 @@ body {
 }
 
 .video-container {
-  margin:30px;
   background-color: rgba(232, 232, 232,.5);
   border-radius: 7px;
   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
@@ -41,12 +40,17 @@ body {
   margin: 0;
   position: relative;
   background-color: rgba(232, 232, 232,.5);
+  border-radius: 5px;
 }
 
 .name {
-  position: absolute;
-  left: 250px;
-  top: 10px;
+  padding-left: 10px;
+  h1 {
+    margin-bottom: 10px;
+  }
+  p {
+    padding-left:10px;
+  }
 }
 
 a:hover {
@@ -69,7 +73,9 @@ a:hover {
 }
 
 .user-page-video {
-
+  p {
+    text-align: center;
+  }
   a {
     text-decoration: none;
     color: black;
@@ -78,6 +84,7 @@ a:hover {
 }
 
 .user-page-video-card {
+  margin-bottom:10px;
 
 }
 
