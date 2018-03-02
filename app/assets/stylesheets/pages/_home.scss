@@ -1,10 +1,7 @@
 .home-container {
   padding-top: 0 !important;
 }
-.search-field {
-  border-radius: 5px;
-  color: black;
-}
+
 #wrapper h1 {
   color: rgb(100,100,100);
   text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
@@ -49,4 +46,24 @@
 .home-video-cards-center {
   display: flex;
   justify-content: space-around;
+}
+
+.banner-button-field {
+  border-radius: 5px;
+  color: white;
+  z-index: auto;
+  width:128px;
+  font-family: "courier";
+  border: none;
+  padding-left: 10px;
+}
+
+.banner-search-field {
+  border-radius: 5px;
+  color: black;
+  z-index: auto;
+  width:265px;
+  font-family: "courier";
+  border: none;
+  padding-left: 10px;
 }
