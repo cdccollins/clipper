@@ -7,10 +7,11 @@ class TransactionsController < ApplicationController
 
    def create
     @transaction = Transaction.new
-    @transaction.user_id = current_user
+    @transaction.user_id = current_user.id
     @video = Video.find(params[:video_id])
     @transaction.cost = @video.price
-    @transaction.video_id = @video
+    @transaction.video_id = @video.id
+    @transaction.save!
     authorize @transaction
     redirect_to video_path(@video)
   end

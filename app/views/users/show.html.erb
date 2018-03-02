@@ -43,7 +43,11 @@
       <h2>My Purchased Videos</h2>
     </div>
     <div class="row user-page-all-videos">
-      <% @videos.each do |video| %>
+      <% videos = [] %>
+      <% current_user.transactions.each do |transaction| %>
+        <% videos << transaction.video %>
+      <% end  %>
+      <% videos.each do |video| %>
         <div class="col-xs-12 col-sm-4 user-page-video">
           <%= link_to video_path(video) do %>
             <div class="card user-page-video-card">
