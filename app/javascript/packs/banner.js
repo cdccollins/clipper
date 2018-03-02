@@ -9,7 +9,7 @@ function bindSweetAlertButtonDemo() {
       timer:10000
       // showConfirmationButton: false
     })
-    event.preventDefault();
+    // event.preventDefault();
 
 
   });
