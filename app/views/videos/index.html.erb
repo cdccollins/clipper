@@ -36,13 +36,13 @@
       <h1>Results</h1>
       <div class="row">
         <% @videos.each do |video| %>
-          <div class="col-sm-12 col-md-6 col-lg-4 results-page-video">
+          <div class="col-sm-12 col-md-6 col-lg-4 home-video-cards-center">
             <%= link_to video_path(video) do %>
-              <div class="card results-page-video-card">
+              <div class="card home-card">
                 <div class="video"> <%= cl_video_tag(video.video.file.public_id, :width=>300, :height=>175, :crop=>"lpad", :background=>"black", autoplay: false) %>
                 </div>
               </div>
-              <p> <%= video.title %></p>
+              <p class="home-card-title"><%= video.title %></p>
             <% end %>
           </div>
         <% end %>
