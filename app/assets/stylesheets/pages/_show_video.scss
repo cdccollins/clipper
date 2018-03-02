@@ -2,19 +2,18 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  h1 {
+    text-shadow: 1px 1px rgb(220,220,220);
+  }
 }
 .video-title {
-  background-color: #e8e8e8;
-  border-radius: 10px;
   padding: 20px;
   margin-top: 75px;
   margin-left: 25px;
   margin-bottom: 0;
   padding-bottom: 10px;
-  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
 }
 .video-owner {
-  background-color: #e8e8e8;
   border-radius: 10px;
   padding: 20px;
   display: flex;
@@ -75,7 +74,6 @@
     text-decoration: none;
   }
 }
-
 
 .fa-download {
   font-size: 50px;

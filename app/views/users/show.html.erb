@@ -26,12 +26,12 @@
 
     <div class="row user-page-all-videos">
       <% current_user.videos.each do |video| %>
-        <div class="col-xs-12 col-sm-4 user-page-video">
+        <div class="col-xs-12 col-sm-4 home-video-cards-center">
           <%= link_to video_path(video) do %>
-            <div class="card user-page-video-card">
+            <div class="card home-card">
                <%= cl_video_tag(video.video.file.public_id, :height=>175, :width=>300, :crop=>"lpad", :background=>"black", autoplay: false, loop: true, preload: "auto", poster: true) %>
             </div>
-            <p> <%= video.title %></p>
+            <p class="home-card-title"><%= video.title %></p>
           <% end %>
         </div>
       <% end %>
@@ -48,12 +48,12 @@
         <% videos << transaction.video %>
       <% end  %>
       <% videos.each do |video| %>
-        <div class="col-xs-12 col-sm-4 user-page-video">
+        <div class="col-xs-12 col-sm-4 home-video-cards-center">
           <%= link_to video_path(video) do %>
-            <div class="card user-page-video-card">
+            <div class="card home-card">
                <%= cl_video_tag(video.video.file.public_id, :height=>175, :width=>300, :crop=>"lpad", :background=>"black", autoplay: false, loop: true, preload: "auto", poster: true) %>
             </div>
-            <p> <%= video.title %></p>
+            <p class="home-card-title"><%= video.title %></p>
           <% end %>
         </div>
       <% end %>
