@@ -28,16 +28,19 @@
     </div>
   </div>
 
-  <div class="video-footer">
-    <div class="video-footer-links">
-      <div class="video-link">
-        <div class="green-button"><%= link_to "Edit video", edit_video_path(@video) %>
-        </div>
-        <div class="red-button"><%= link_to "Delete video", video_path(@video), :method => :delete %>
+  <% if @video.user == current_user %>
+    <div class="video-footer">
+      <div class="video-footer-links">
+        <div class="video-link">
+          <div class="green-button"><%= link_to "Edit video", edit_video_path(@video) %>
+          </div>
+          <div class="red-button"><%= link_to "Delete video", video_path(@video), :method => :delete %>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+    <% else %>
+    <% end %>
 </div>
 
 
@@ -51,13 +54,13 @@
         </button>
       </div>
       <div class="modal-body">
-        <h2>Cost: £ <%= @video.price %></h2>
+        <h2>Cost: £<%= @video.price %></h2>
         <div class="form">
-        <%= simple_form_for([@video, @transaction]) do |f| %>
-          <div class="form-actions">
-            <%= f.submit "Pay", :id=>"sweet-alert-demo", :class=>"green-button video-green-button"%>
-          </div>
-        <% end %>
+          <%= simple_form_for([@video, @transaction]) do |f| %>
+            <div class="form-actions">
+              <%= f.submit "Pay", :id=>"sweet-alert-demo", :class=>"green-button video-green-button"%>
+            </div>
+          <% end %>
         </div>
       </div>
     </div>
