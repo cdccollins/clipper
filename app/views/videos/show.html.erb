@@ -47,31 +47,17 @@
         </button>
       </div>
       <div class="modal-body">
-        <form>
-          <div class="form-group">
-            <label for="formGroupExampleInput">Card Holder's Name</label>
-            <input type="text" class="form-control" id="formGroupExampleInput">
+        <h2>Cost - <%= @video.price %></h2>
+        <div class="form">
+        <%= simple_form_for([@video, @transaction]) do |f| %>
+          <div class="form-actions">
+            <%= f.submit "Pay", :id=>"sweet-alert-demo", :class=>"green-button video-green-button"%>
           </div>
-          <div class="form-group">
-            <label for="formGroupExampleInput2">Card Number</label>
-            <input type="text" class="form-control" id="formGroupExampleInput2">
-          </div>
-          <div class="form-group">
-            <label for="formGroupExampleInput2">Card Type</label>
-            <input type="text" class="form-control" id="formGroupExampleInput2">
-          </div>
-          <div class="form-group">
-            <label for="formGroupExampleInput2">CVC Code</label>
-            <input type="text" class="form-control" id="formGroupExampleInput2">
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" id="sweet-alert-demo" class="green-button-large">Pay</button>
+        </div>
+        <% end %>
       </div>
     </div>
   </div>
 </div>
-
 
 <%= javascript_pack_tag "banner" %>

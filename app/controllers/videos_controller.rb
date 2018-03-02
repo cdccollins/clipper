@@ -35,7 +35,7 @@ class VideosController < ApplicationController
   end
 
   def show
-
+    @transaction = Transaction.new
   end
 
   def edit
