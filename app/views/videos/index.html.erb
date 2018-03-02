@@ -2,7 +2,7 @@
 <div class="container results">
   <div class="search-results">
 
-    <div class="filter-search">
+    <div class="filter-search text-center">
       <div class="filter-option header">
         <h2>Filter Search</h2>
       </div>
@@ -21,13 +21,13 @@
           <div class="form-group">
             <label for="Duration">Duration</label>
             <p>
-            <%= text_field_tag :duration, params[:duration], :class => 'search-field'%>
+            <%= text_field_tag :duration, params[:duration], :placeholder => 'In seconds', :class => 'search-field'%>
             </p>
           </div>
         </div>
 
         <div class="filter-option button">
-          <%= submit_tag "Search", :name => nil, :class => 'green-button' %>
+          <%= submit_tag "Search", :name => nil, :class => 'green-button button-filter' %>
         </div>
       <% end %>
     </div>
@@ -36,12 +36,13 @@
       <h1>Results</h1>
       <div class="row">
         <% @videos.each do |video| %>
-          <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="col-sm-12 col-md-6 col-lg-4 results-page-video">
             <%= link_to video_path(video) do %>
-              <div class="card result">
-                <div class="video"> <%= cl_video_tag(video.video.file.public_id, :width=>250, :height=>175, :crop=>"lpad", :background=>"black", autoplay: false) %>
+              <div class="card results-page-video-card">
+                <div class="video"> <%= cl_video_tag(video.video.file.public_id, :width=>300, :height=>175, :crop=>"lpad", :background=>"black", autoplay: false) %>
                 </div>
               </div>
+              <p> <%= video.title %></p>
             <% end %>
           </div>
         <% end %>

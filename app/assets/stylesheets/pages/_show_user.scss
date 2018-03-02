@@ -17,7 +17,6 @@ body {
 
 .user-image {
   margin: 10px;
-
 }
 
 .user-content {
@@ -58,7 +57,7 @@ a:hover {
 }
 
 .profile-video-title {
-  margin:0 35px;
+  margin: 0px 35px;
   display: flex;
   position: relative;
   .green-button {
@@ -75,6 +74,7 @@ a:hover {
 .user-page-video {
   p {
     text-align: center;
+    margin-bottom: 20px;
   }
   a {
     text-decoration: none;
@@ -84,7 +84,7 @@ a:hover {
 }
 
 .user-page-video-card {
-  margin-bottom:10px;
+  margin-bottom:5px;
 
 }
 
